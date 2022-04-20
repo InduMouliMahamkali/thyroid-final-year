@@ -1,13 +1,13 @@
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
-from sklearn.metrics  import roc_auc_score,accuracy_score
+from sklearn.metrics import roc_auc_score,accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
 import pandas as pd
 
 class Model_Finder:
     """
                 This class shall  be used to find the model with best accuracy and AUC score.
-                Written By: iNeuron Intelligence
+
                 Version: 1.0
                 Revisions: None
 
@@ -27,7 +27,7 @@ class Model_Finder:
                                 Output: The model with the best parameters
                                 On Failure: Raise Exception
 
-                                Written By: iNeuron Intelligence
+
                                 Version: 1.0
                                 Revisions: None
 
@@ -73,7 +73,7 @@ class Model_Finder:
                                                 Output: The model with the best parameters
                                                 On Failure: Raise Exception
 
-                                                Written By: iNeuron Intelligence
+
                                                 Version: 1.0
                                                 Revisions: None
 
@@ -126,7 +126,7 @@ class Model_Finder:
     #                                     Output: The model with the best parameters
     #                                     On Failure: Raise Exception
     #
-    #                                     Written By: iNeuron Intelligence
+    #
     #                                     Version: 1.0
     #                                     Revisions: None
     #
@@ -176,7 +176,7 @@ class Model_Finder:
                                                 Output: The best model name and the model object
                                                 On Failure: Raise Exception
 
-                                                Written By: iNeuron Intelligence
+
                                                 Version: 1.0
                                                 Revisions: None
 

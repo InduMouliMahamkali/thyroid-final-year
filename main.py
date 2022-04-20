@@ -1,5 +1,5 @@
 from wsgiref import simple_server
-from flask import Flask, request
+from flask import Flask, request, render_template
 from flask import Response
 import os
 from flask_cors import CORS, cross_origin
@@ -16,7 +16,10 @@ app = Flask(__name__)
 dashboard.bind(app)
 CORS(app)
 
-
+@app.route("/", methods=['GET'])
+@cross_origin()
+def home():
+    return render_template('index.html')
 
 @app.route("/predict", methods=['POST'])
 @cross_origin()
@@ -73,9 +76,10 @@ def trainRouteClient():
         return Response("Error Occurred! %s" % e)
     return Response("Training successfull!!")
 
-port = int(os.getenv("PORT"))
+
 if __name__ == "__main__":
-    host = '0.0.0.0'
+    port = int(os.getenv("PORT",7000))
+    host = '127.0.0.1'
     #port = 5000
     httpd = simple_server.make_server(host, port, app)
     # print("Serving on %s %d" % (host, port))
